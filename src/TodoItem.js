@@ -69,7 +69,9 @@ const TodoItem = (props) => {
 };
 
 TodoItem.defaultProps = {
-  handleCheck: () => {}
+  handleCheck: () => {},
+  handleShiftUp: () => {},
+  handleShiftDown: () => {}
 };
 
 export default TodoItem;
