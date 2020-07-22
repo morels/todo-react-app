@@ -1,0 +1,33 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: sans-serif;
+  text-align: center;
+  align-items: center;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 300px;
+  margin-bottom: 25px;
+}
+
+.content {
+  padding: 20px;
+  min-height: 200px;
+  width: 95%;
+  background-color: whitesmoke;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
