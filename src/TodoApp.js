@@ -18,21 +18,10 @@ class TodoApp extends React.Component {
     fetch("https://my-json-server.typicode.com/belfus/promoquidata/todos")
       .then((response) => response.json())
       .then((data) => {
-        const items = data
-          .filter((item) => item.state !== "delete")
-          .sort((a, b) => a.company.localeCompare(b.company));
-
-        const itemsPerCompany = items.reduce(
-          (map, item) =>
-            map[item.company]
-              ? map[item.company].concat(item)
-              : new Array(item),
-          {}
-        );
-
         this.setState({
-          items: items,
-          itemsPerCompany: itemsPerCompany
+          items: data
+            .filter((item) => item.state !== "delete")
+            .sort((a, b) => a.company.localeCompare(b.company))
         });
       });
   }
@@ -84,9 +73,6 @@ class TodoApp extends React.Component {
 
   render() {
     const items = this.state.items;
-    const companies = items
-      ? [...new Set(items.map((item) => item.company))]
-      : [];
     let lastCompany = "";
     return (
       <div>
