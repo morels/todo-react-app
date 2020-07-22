@@ -7,7 +7,7 @@ const style = {
   marginBottom: "1rem"
 };
 
-const INITIAL_STATE = { name: "", company: "", price: "42" };
+const INITIAL_STATE = { name: "", company: "", price: 42 };
 
 export default class AddTodoItem extends React.Component {
   constructor(props) {
